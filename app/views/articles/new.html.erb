@@ -2,3 +2,19 @@
 <h3>Use the text boxes to generate a new email message and to add emails to <thead>
   the message
 </thead></h3>
+
+<%= form_with scope: :article, local: true do |form| %>
+  <p>
+    <%= form.label :Recipients %><br>
+    <%= form.text_field :Recipients %>
+  </p>
+
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_area :Email %>
+  </p>
+
+  <p>
+    <%= form.submit :Send %><br>
+  </p>
+<% end %>
